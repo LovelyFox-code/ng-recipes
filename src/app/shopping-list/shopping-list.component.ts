@@ -18,6 +18,5 @@ export class ShoppingListComponent {
 
   onAddIngredients(ingredient: Ingredient) {
     this.ingredients.push(ingredient);
-    console.log(this.ingredients);
   }
 }
