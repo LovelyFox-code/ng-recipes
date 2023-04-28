@@ -1,23 +1,17 @@
 <div class="recipe_list">
-    <div class="row">
-        <div class="col-xs-12">
-            <button class="btn btn-success">New Recipe</button>
-        </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <button class="btn btn-success">New Recipe</button>
     </div>
-    <hr>
-    <div class="row">
-        <div *ngFor="let recipe of recipes" class="col-xs-12 list-group">
-            <a href="#" class="list-group-item clearfix d-flex align-items-center">
-                <div class="pull-left">
-                    <h4 class="list-group-item-heading">{{recipe.name}}</h4>
-                    <p class="list-group-item-text">{{recipe.description}}</p>
-                </div>
-                <span class="pull-right">
-                    <img src={{recipe.imagePath}} alt={{recipe.name}} class="img-responsive" style="height: 100px;">
-                </span>
-            </a>
-            
-        </div>
-        <app-recipe-item></app-recipe-item>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-xs-12 list-group">
+      <app-recipe-item
+        (recipeSelected)="onRecipeSelected(recipeEl)"
+        *ngFor="let recipeEl of recipes"
+        [recipe]='recipeEl'></app-recipe-item>
     </div>
+
+  </div>
 </div>

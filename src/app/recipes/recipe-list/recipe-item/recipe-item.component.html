@@ -1,1 +1,16 @@
-<p>recipe-item works!</p>
+<a
+  (click)="onSelected()"
+  class="list-group-item clearfix d-flex align-items-center"
+  href="#">
+<span class="row">
+
+      <div class="pull-left col">
+    <h4 class="list-group-item-heading">{{recipe.name}}</h4>
+    <p class="list-group-item-text">{{recipe.description}}</p>
+  </div>
+
+  <span class="pull-right col">
+     <img alt={{recipe.name}} class="img-responsive" ngSrc="{{recipe.imagePath}}" style="max-width: 150px;">
+  </span>
+</span>
+</a>
