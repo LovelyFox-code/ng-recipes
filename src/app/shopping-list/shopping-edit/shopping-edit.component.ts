@@ -18,7 +18,7 @@ export class ShoppingEditComponent {
   @ViewChild('amountInput', { static: false }) amountInput: ElementRef;
   @Output() ingredientAdded = new EventEmitter<Ingredient>();
 
-  onAddIngredients(name: HTMLInputElement, amount: HTMLInputElement) {
+  onAddIngredients() {
     const ingName = this.nameInputRef.nativeElement.value;
     const ingAmount = this.amountInput.nativeElement.value;
     const newIngredient = new Ingredient(ingName, ingAmount);
