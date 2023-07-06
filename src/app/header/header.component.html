@@ -1,27 +1,28 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<div class="bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark ">
     <div class="d-flex flex-grow-1">
-        <a class="navbar-brand" href="#">Recipe Book </a>
+      <a class="navbar-brand" href="#">Recipe Book </a>
     </div>
     <div class="collapse navbar-collapse justify-content-between">
-        <ul class="navbar-nav ml-auto flex-nowrap">
-            <li class="nav-item">
-                <a href="#" class="nav-link" (click)="onSelect('recipe')">Recipes</a>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link" (click)="onSelect('shopping-list')">Shopping List</a>
-            </li>
-
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Dropdown
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenu">
-                  <a class="dropdown-item" href="#">Save Data</a>
-                  <a class="dropdown-item" href="#">Fetch Data</a>
-                </div>
-              </li>
-        </ul>
+      <ul class="navbar-nav ml-auto flex-nowrap">
+        <li class="nav-item">
+          <a (click)="onSelect('recipe')" class="nav-link" href="#">Recipes</a>
+        </li>
+        <li class="nav-item">
+          <a (click)="onSelect('shopping-list')" class="nav-link" href="#">Shopping List</a>
+        </li>
+  
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <div appDropdown class="btn-group">
+          <button class="btn btn-primary dropdown-toggle" type="button">Dropdown<span
+            class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="#">Fetch data</a></li>
+            <li><a href="#">Save data</a></li>
+          </ul>
+        </div>
+      </ul>
     </div>
-</nav>
+  </nav>
+</div>
